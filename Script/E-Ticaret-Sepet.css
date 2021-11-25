@@ -1,0 +1,9 @@
+.divUrun {
+    margin: auto;
+    margin-top: 60px;
+    border: 1px solid black;
+    width: 50rem;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
