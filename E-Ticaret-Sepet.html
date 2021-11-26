@@ -35,7 +35,7 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto" id="ulList">
                         <li class="nav-item">
                             <a class="nav-link" href="E-Ticaret-SignUp.html"><i class="fas fa-user-plus"> </i>
                                 Üye Ol
@@ -58,7 +58,7 @@
             </div>
         </nav>
     </div>
-    <div class="divUrun" id="products">
+    <div class="divUrun" id="products" style="display: none;">
         <table style="width: 100%;">
             <tr>
                 <td style="border: 1px solid black; width: 100%; display: flex; margin: auto;">
@@ -75,6 +75,10 @@
                 </td>
             </tr>
         </table>
+        <div class="divButtons">
+            <button class="btn btn-danger" id="cls" onclick="Temizle()">Temizle</button>
+            <button class="btn btn-primary" id="buy" onclick="SatınAl()">Satın Al</button>
+        </div>
     </div>
     <script src="Script/E-Ticaret-SignUp.js"></script>
     <script src="Script/E-Ticaret-Sepet.js"></script>

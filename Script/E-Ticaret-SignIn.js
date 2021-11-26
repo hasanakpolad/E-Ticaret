@@ -11,6 +11,7 @@ function Login(params) {
                 for (var i = 0; i < res.rows.length; i++) {
                     if (res.rows[i].kullaniciAdi == userName && res.rows[i].sifre == pass) {
                         console.log('Giriş başarılı')
+                        userLogin = window.localStorage.setItem('user',userName)
                         if (res.rows[i].IsAdmin == '1') {
                             window.open('/E-Ticaret/E-Ticaret-Admin.html','_self')
                         }
