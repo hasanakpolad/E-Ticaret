@@ -19,7 +19,7 @@ function AddUser(n, m, p) {
 function GetUser(u, p) {
     return new Promise(function (resolve, reject) {
         db.transaction(function (tx) {
-            tx.executeSql('Select kullaniciAdi,sifre From User Where kullaniciAdi=? AND sifre = ?', [u, p], function (tx, result) {
+            tx.executeSql('Select kullaniciAdi,sifre, IsAdmin From User Where kullaniciAdi=? AND sifre = ?', [u, p], function (tx, result) {
                 resolve(result)
                 // return result;
             },
@@ -51,7 +51,7 @@ function GetProducts(cN) {
 function AddProducts(pI, pD, pN, pC) {
     return new Promise(function (resolve, reject) {
         db.transaction(function (tx) {
-            tx.executeSql('Insert Into Product Values(?,?,?,?)', [pI, pN, pD, pC], function (model, result) {
+            tx.executeSql('Insert Into Product Values(?,?,?,?,?,?)', [1, pI, pD, pN, pC, 1], function (model, result) {
                 resolve(result)
             },
                 function (tx, error) {

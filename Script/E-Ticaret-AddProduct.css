@@ -1,0 +1,15 @@
+.addProd{
+    margin: auto;
+    display: flex;
+    padding: 3rem;
+}
+.divButtons{
+    display: flex;
+    margin: auto;
+    justify-content: end;
+    margin-right: 3rem;
+}
+
+#prodPic{
+    padding: 4px;
+}

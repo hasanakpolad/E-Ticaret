@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Script/E-Ticaret.css">
+    <link rel="stylesheet" href="Script/E-Ticaret-Urunler.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -13,7 +14,7 @@
     <title>Ürünler</title>
 </head>
 
-<body>
+<body onload="GetProducts()">
     <div id="nav">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="E-Ticaret.html">E-Tükkan</a>
@@ -40,20 +41,22 @@
                                 Ol</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="E-Ticaret-SignIn.html"><span><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-file-person" viewBox="0 0 16 16">
+                            <a class="nav-link" href="E-Ticaret-SignIn.html">
+                                <span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
                                         <path
                                             d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
                                         <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg></span> Üye Girişi</a>
+                                    </svg>
+                                </span> Üye Girişi
+                            </a>
                         </li>
                     </ul>
                 </span>
             </div>
         </nav>
     </div>
-    <div id="sampleUrun" class="urun">
+    <div id="sampleUrun" class="prod">
         <div class="card" style="width: 18rem;">
             <img src="res/img.PNG" class="card-img-top" alt="...">
             <div class="card-body">

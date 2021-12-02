@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,9 +35,10 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <ul class="navbar-nav mr-auto">
+                    <ul id="ulList" class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="E-Ticaret-SignIn.html" onclick="LogOut()"><i class="fas fa-sign-out-alt"></i>
+                            <a class="nav-link" href="E-Ticaret-SignIn.html" onclick="LogOut()"><i
+                                    class="fas fa-sign-out-alt"></i>
                                 Çıkış Yap
                             </a>
                         </li>
@@ -45,5 +47,45 @@
             </div>
         </nav>
     </div>
+    <span style="display: flex; justify-content: center; margin-top: 2rem;">Ürün Ekleme</span>
+    <div class="addProd">
+        <div class="input-group mb-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Resim</span>
+                </div>
+                <input type="file" accept="image/*" onchange="ImageToBase64(this)" id="prodPic">
+                <img src="" alt="" id="prodPicture">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">İsim</span>
+                </div>
+                <input type="text" class="form-control" id="prodName" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Açıklama</span>
+                </div>
+                <input type="text" class="form-control" id="prodDesc" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Adet</span>
+                </div>
+                <input type="number" class="form-control" id="prodCount" step="1" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+    </div>
+    <div class="divButtons">
+        <button class="btn btn-danger" id="cls" onclick="ImageToBase64()">Temizle</button>
+        <button class="btn btn-primary" id="buy" onclick="AddProd()">Kaydet</button>
+    </div>
+    <script src="Script/E-Ticaret-AddProduct.js"></script>
+    <script src="services/E-TicaretService.js"></script>
 </body>
+
 </html>
