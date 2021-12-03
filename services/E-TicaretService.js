@@ -34,10 +34,10 @@ db.transaction(function (tx) {
     tx.executeSql('Create Table If Not Exists Product(id unique, productImage, productName, productDesc, productCount, customerId)')
 })
 //GetProducts
-function GetProducts(cN) {
+function GetProducts(pId) {
     return new Promise(function (resolve, reject) {
         db.transaction(function (tx) {
-            tx.executeSql('Select * From Product p INNER JOIN User u ON p.id = u.id', [], function (model, result) {
+            tx.executeSql('Select * From Product WHERE id=(?)', [pId], function (model, result) {
                 resolve(result)
             },
                 function (tx, error) {
@@ -51,7 +51,7 @@ function GetProducts(cN) {
 function AddProducts(pI, pD, pN, pC) {
     return new Promise(function (resolve, reject) {
         db.transaction(function (tx) {
-            tx.executeSql('Insert Into Product Values(?,?,?,?,?,?)', [2, pI, pD, pN, pC, 1], function (model, result) {
+            tx.executeSql('Insert Into Product Values(?,?,?,?,?,?)', [3, pI, pD, pN, pC, 1], function (model, result) {
                 resolve(result)
             },
                 function (tx, error) {
@@ -79,7 +79,7 @@ function GetAllProduct() {
     })
 }
 db.transaction(function (tx) {
-    tx.executeSql('Create Table If Not Exists Basket(id unique, cName, pName, cId, pId)')
+    tx.executeSql('Create Table If Not Exists Basket(id unique, pName, cName, pCount, cId, pId)')
 })
 //AddBasket
 function GetBasket() {
@@ -95,10 +95,10 @@ function GetBasket() {
         })
     })
 }
-function AddBasket(id, pn, cn, cid, pid) {
+function AddBasket(id, pn, cn, pC, cid, pid) {
     return new Promise(function (resolve, reject) {
         db.transaction(function (tx) {
-            tx.executeSql('Insert Into Basket Values(?,?,?,?,?)', [id, pn, cn, cid, pid], function (model, result) {
+            tx.executeSql('Insert Into Basket Values(?,?,?,?,?)', [1, pn, cn, pC, cid, pid], function (model, result) {
                 resolve(result)
             },
                 function (tx, error) {

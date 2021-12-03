@@ -16,22 +16,22 @@ function LogOut() {
 
 var urunDiv = document.getElementById('sampleUrun')
 var prodCount = 1
-var newUrun = '<div><div class="card" id="urun' + prodCount + '" style="width: 18rem;"> ' +
-    '<img src="res/img.PNG" class="card-img-top" alt="...">' +
-    '<div class="card-body"> ' +
-    '   <h5 class="card-title" id="urun' + prodCount + 'Title">Card title</h5> ' +
-    '  <p class="card-text" id="urun' + prodCount + 'Body">Some quick example text to build on the card title and make up ' +
-    '     the bulk of the' +
-    '     cards ' +
-    '     content.</p> ' +
-    ' <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btnUrun' + prodCount + '">Ürün ' +
-    '     Detay</button>' +
-    ' <a href="#" class="btn btn-primary">Sepete Ekle</a>' +
-    '</div>' +
-    '</div> </div>'
+var newUrun
 function GetProd(params) {
     GetAllProduct().then(res => {
         for (var i = 0; i < res.rows.length; i++) {
+            newUrun = '<div><div class="card" id="urun' + prodCount + '" style="width: 18rem;"> ' +
+                '<img src="res/img.PNG" class="card-img-top" alt="...">' +
+                '<div class="card-body"> ' +
+                '   <h5 class="card-title" id="urun' + prodCount + 'Title"></h5> ' +
+                '  <p class="card-text" id="urun' + prodCount + 'Body"> </p> ' +
+                ' <div class="basketBtn"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btnUrun' + prodCount + '" onclick="GetModalDesc(this)">Ürün ' +
+                '     Detay</button>' +
+                '<div class="basket"> ' +
+                '<input type="number" step="1" class="basket-input" id="prdCnt">' +
+                '<button class="basket-button" type="submit">Sepet</button> ' +
+                ' </div></div>' +
+                '</div> </div>'
             urunDiv.innerHTML += newUrun
             var prodTitle = document.getElementById("urun" + prodCount + "Title")
             var prodBody = document.getElementById("urun" + prodCount + "Body")

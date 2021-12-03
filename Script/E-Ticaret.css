@@ -26,3 +26,34 @@
   .container {
     padding: 2px 16px;
   }
+  .basket {
+    position: relative;
+    width: 8rem;
+  }
+  .basket-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    padding: 10px 50px 10px 20px; 
+    line-height: 1;
+    box-sizing: border-box;
+    outline: none;
+  }
+  .basket-button {
+    position: absolute;
+    right: 3px; 
+    top: 3px;
+    bottom: 3px;
+    border: 0;
+    background: #007bff;
+    color: #fff;
+    outline: none;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 100px;
+    z-index: 2;
+  }
+  .basketBtn{
+    width: 100%;
+    display: flex;
+  }
