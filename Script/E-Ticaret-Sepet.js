@@ -9,7 +9,7 @@ function GetBasket() {
         }).catch()
     }
     else{
-        GetProducts()
+        // GetProducts()
     }
 }
 function Temizle() {

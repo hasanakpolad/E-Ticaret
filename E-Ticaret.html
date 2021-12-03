@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onload="GetProds()">
     <div id="nav">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="E-Ticaret.html">E-Tükkan</a>
@@ -41,13 +41,9 @@
                                 Ol</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="E-Ticaret-SignIn.html"><span><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-file-person" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
-                                        <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg></span> Üye Girişi</a>
+                            <a class="nav-link" href="E-Ticaret-SignIn.html"> <i class="fas fa-user"></i>
+                                Üye Girişi
+                            </a>
                         </li>
                     </ul>
                 </span>
@@ -58,20 +54,20 @@
         <div class="sampleCard">
             <img src="img_avatar.png" alt="Avatar" style="width:100%">
             <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
             </div>
-          </div>
-          <div class="sampleCard">
+        </div>
+        <div class="sampleCard">
             <img src="img_avatar.png" alt="Avatar" style="width:100%">
             <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
             </div>
-          </div>
+        </div>
     </div>
     <div id="sampleUrun" class="urun">
-        <div class="card" style="width: 18rem; margin-right: 15px;">
+        <!-- <div class="card" style="width: 18rem; margin-right: 15px;">
             <img src="res/img.PNG" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title" id="urun1Title">Stock Ürün 1</h5>
@@ -95,8 +91,8 @@
                     Detay</button>
                 <a href="#" class="btn btn-primary">Sepete Ekle</a>
             </div>
-        </div>
-          
+        </div> -->
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -117,9 +113,10 @@
 
         </div>
     </div>
- 
+
 
     <script src="Script/E-Ticaret.js"></script>
+    <script src="Script/E-Ticaret-Urunler.js"></script>
     <script src="services/E-TicaretService.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

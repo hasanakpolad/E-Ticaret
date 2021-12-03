@@ -13,3 +13,18 @@ if (user != null) {
 function LogOut() {
     return window.localStorage.clear()
 }
+
+function GetProds() {
+    GetAllProduct().then(res => {
+        for (var i = 0; i < res.rows.length; i++) {
+            urunDiv.innerHTML += newUrun
+            var prodTitle = document.getElementById("urun" + prodCount + "Title")
+            var prodBody = document.getElementById("urun" + prodCount + "Body")
+            prodTitle.innerText = res.rows[i].productName
+            prodBody.innerText = res.rows[i].productDesc
+        }
+        prodCount++
+    }).catch(reject => {
+        alert(reject.message)
+    })
+}

@@ -51,7 +51,7 @@ function GetProducts(cN) {
 function AddProducts(pI, pD, pN, pC) {
     return new Promise(function (resolve, reject) {
         db.transaction(function (tx) {
-            tx.executeSql('Insert Into Product Values(?,?,?,?,?,?)', [1, pI, pD, pN, pC, 1], function (model, result) {
+            tx.executeSql('Insert Into Product Values(?,?,?,?,?,?)', [2, pI, pD, pN, pC, 1], function (model, result) {
                 resolve(result)
             },
                 function (tx, error) {
