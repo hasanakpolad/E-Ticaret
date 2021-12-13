@@ -19,7 +19,7 @@ function Temizle() {
 function SatınAl(params) {
     if (user == '') {
         alert('Lütfen devam etmek için giriş yapınız.')
-        window.open('/E-Ticaret/E-Ticaret-SignIn.html','_self')
+        window.open('/E-Ticaret-SignIn.html','_self')
     }
     else{
         Temizle()

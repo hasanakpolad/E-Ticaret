@@ -14,10 +14,10 @@ function Login(params) {
                         if (res.rows[i].IsAdmin == 'X') {
                             window.localStorage.setItem('user', userName)
                             window.localStorage.setItem('admin', res.rows[i].IsAdmin)
-                            window.open('/E-Ticaret/E-Ticaret.html', '_self')
+                            window.open('/E-Ticaret.html', '_self')
                         }
                         else {
-                            window.open('/E-Ticaret/E-Ticaret.html', '_self')
+                            window.open('/E-Ticaret.html', '_self')
                             window.localStorage.setItem('user', userName)
                         }
                     }

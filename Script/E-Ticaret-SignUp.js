@@ -9,7 +9,7 @@ function Send() {
     if (userName.value != '' && mail.value != '' && pass.value != '' && passagn.value != '') {
         if (pass.value == passagn.value) {
             AddUser(userName.value, mail.value, pass.value)
-            window.open('/E-Ticaret/E-Ticaret-SignIn.html', '_self')
+            window.open('/E-Ticaret-SignIn.html', '_self')
         }
         else {
             alert('Şifreler aynı olmak zorunda')
